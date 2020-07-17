@@ -62,3 +62,7 @@ no crontab for root
 ```
 systemctl restart cron
 ```
+
+#### todo
+
+后续研究使用工具`logrotate`来做日志切割...
