@@ -42,9 +42,6 @@ crontab -u root -e
 no crontab for root
 ```
 
-[root@localhost ~]# crontab -l
-no crontab for root
-
 这个问题非常简单，同样在 root 用户下输入 crontab -e
 
 按 `Esc` 按`:wq`, 回车
