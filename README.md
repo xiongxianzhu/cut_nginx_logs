@@ -19,7 +19,7 @@ systemctl restart cron
 mkdir -p /home/xx/scripts
 cd /home/xx/scripts
 git clone git@github.com:xiongxianzhu/cut_nginx_logs.git
-mv ./cut_nginx_logs/cut_nginx_logs.sh cut_nginx_logs.sh 
+mv ./cut_nginx_logs/cut_nginx_logs.sh cut_nginx_logs.sh
 ```
 
 根据自身服务器的环境， 修改变量`log_dir`, `nginx_bin`和`save_days`的值
@@ -29,11 +29,13 @@ mv ./cut_nginx_logs/cut_nginx_logs.sh cut_nginx_logs.sh
 在crontab添加定时任务:
 
 ```
-vim /etc/crontab
+crontab -l
+crontab -e
+or
+crontab -u root -e
 ```
 
 追回的内容如下：
-
 
 ```
 59 23 * * * sleep 56;sh /home/work/scripts/cut_nginx_logs.sh >/dev/null 2>&1
