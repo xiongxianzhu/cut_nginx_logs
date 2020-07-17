@@ -35,6 +35,22 @@ or
 crontab -u root -e
 ```
 
+若root用户下输入 `crontab -l` 显示 `no crontab for root`, 如：
+
+```
+[root@localhost ~]# crontab -l
+no crontab for root
+```
+
+[root@localhost ~]# crontab -l
+no crontab for root
+
+这个问题非常简单，同样在 root 用户下输入 crontab -e
+
+按 `Esc` 按`:wq`, 回车
+
+在输入 `crontab -l` 就没有问题了
+
 追回的内容如下：
 
 ```
